@@ -1,0 +1,38 @@
+<div class="container">
+    <form class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1"
+             placeholder="name@example.com" formControlName="email"
+             ngClass="{is-invalid :hasErrors('message', 'required' ) || hasErrors('email', 'required' )}">
+
+             @if (hasErrors('email', 'required' )) {
+                <span class="text-danger">completa este campo</span>
+             }
+
+             @if (hasErrors('email', 'required' )) {
+                <span class="text-danger">completa este campo</span>
+             }
+            
+           
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+            formControlName="message"
+            ngClass="{is-invalid :hasErrors('message', 'required' ) || hasErrors('email', 'required' )}"></textarea>
+            @if (hasErrors('message', 'required' )) {
+                <span class="text-danger">completa este campo</span>
+             }
+
+             @if (hasErrors('message', 'minlength' )) {
+                <span class="text-danger">completa este campo</span>
+             }
+            
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+
+</div>

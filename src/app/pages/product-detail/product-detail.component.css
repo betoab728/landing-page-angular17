@@ -1,0 +1,5 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../assets/wall.jpg');
+  
